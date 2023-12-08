@@ -19,8 +19,10 @@ export default function Goi() {
       setQuest(quest + 1);
       setCout(count + 1);
       setLen(len - 1);
+      alert("せいかい");
     } else if (a === b && len - 1 === 0) {
-      alert(`finish あたなの得点は${count}です`);
+      setCout(count + 1);
+      alert(`finish あたなの得点は${count + 1}です`);
     } else {
       console.log("錯了！");
       setCout(count - 1);
