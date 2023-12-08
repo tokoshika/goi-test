@@ -23,8 +23,9 @@ export default function Goi() {
     } else if (a === b && len - 1 === 0) {
       setCout(count + 1);
       alert(`finish あたなの得点は${count + 1}です`);
+      document.querySelector(".question").textContent = "お疲れさまでした！";
     } else {
-      console.log("錯了！");
+      alert("ざんねん");
       setCout(count - 1);
     }
   };
@@ -41,7 +42,7 @@ export default function Goi() {
             <button onClick={click}>{qus[index].ans[1]}</button>
             <br />
             <button onClick={click}>{qus[index].ans[2]}</button>
-            <div>あなたの得点 【{count}】</div>
+            <div className="point">あなたの得点 【{count}】</div>
           </div>
         </div>
       </div>

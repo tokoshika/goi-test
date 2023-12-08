@@ -1,12 +1,14 @@
 .goi-container {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  margin: 0 auto;
   background-color: aliceblue;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 
 .inner-container {
+  margin-left: 20rem;
   text-align: left;
 }
 .question,
@@ -22,4 +24,13 @@ button {
   font-size: 2rem;
   border-radius: 5px;
   margin-bottom: 1.5rem;
+}
+
+.goi-span {
+  width: 100px;
+  background-color: red;
+}
+
+.point {
+  justify-content: left;
 }
