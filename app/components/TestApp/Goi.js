@@ -19,7 +19,7 @@ export default function Goi() {
       setQuest(quest + 1);
       setCout(count + 1);
       setLen(len - 1);
-      alert("せいかい");
+      alert("おめでとう");
     } else if (a === b && len - 1 === 0) {
       setCout(count + 1);
       alert(`finish あたなの得点は${count + 1}です`);
@@ -31,15 +31,19 @@ export default function Goi() {
 
   return (
     <>
-      <h1>This is Goi</h1>
-      <div className="question">問題 : {qus[quest].q}</div>
-      <div className="ans">
-        <button onClick={click}>{qus[index].ans[0]}</button>
-        <br />
-        <button onClick={click}>{qus[index].ans[1]}</button>
-        <br />
-        <button onClick={click}>{qus[index].ans[2]}</button>
-        <div>あなたの得点 【{count}】</div>
+      <div className="goi-container">
+        <div className="inner-container">
+          <p>問題に正解すると1点、間違うと-1点です。</p>
+          <div className="question">問題 : {qus[quest].q}</div>
+          <div className="ans">
+            <button onClick={click}>{qus[index].ans[0]}</button>
+            <br />
+            <button onClick={click}>{qus[index].ans[1]}</button>
+            <br />
+            <button onClick={click}>{qus[index].ans[2]}</button>
+            <div>あなたの得点 【{count}】</div>
+          </div>
+        </div>
       </div>
     </>
   );
