@@ -1,8 +1,12 @@
 .goi-container {
-  /* display: flex; */
-  /* justify-content: center; */
   margin: 0 auto;
   background-color: aliceblue;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.goi-container2 {
+  margin: 0 auto;
+  background-color: rgb(216, 201, 218);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
@@ -12,6 +16,7 @@
   text-align: left;
 }
 .question,
+.question2,
 .ans {
   font-size: 3rem;
   margin: 0;

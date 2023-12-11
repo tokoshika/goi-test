@@ -1,6 +1,6 @@
 "use client";
 import { createElement, useState } from "react";
-import { qus } from "./Module";
+import { qus } from "./Mojule";
 
 export default function Goi() {
   const [quest, setQuest] = useState(0);
@@ -26,8 +26,10 @@ export default function Goi() {
     } else if (a === b && len - 1 === 0) {
       setCout(count + 1);
       alert(`finish あたなの得点は${count + 1}です`);
-      document.querySelector(".question").textContent = "お疲れさまでした！";
-      const ansDiv = document.querySelector(".ans");
+      document.querySelector(".question2").textContent = "お疲れさまでした！";
+      console.log(document.querySelector(".question2"));
+      console.log("finish");
+      const ansDiv = document.querySelector(".ans2");
       ansDiv.innerHTML = "";
     } else {
       alert("ざんねん");
@@ -37,13 +39,13 @@ export default function Goi() {
 
   return (
     <>
-      <div className="goi-container">
+      <div className="goi-container2">
         <div className="inner-container">
           <p>問題に正解すると1点、間違うと-1点です。</p>
-          <div className="question">
+          <div className="question2">
             問題 {quest + 1} : {qus[quest].q}
           </div>
-          <div className="ans">
+          <div className="ans2">
             <button onClick={click}>{qus[index].ans[0]}</button>
             <br />
             <button onClick={click}>{qus[index].ans[1]}</button>
