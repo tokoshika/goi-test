@@ -1,5 +1,3 @@
-import Goi from "./components/TestApp/NO1/Goi";
-
 export default function App() {
   return (
     <>

@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Goi from "./components/TestApp/NO1/Goi";
 import Goi2 from "./components/TestApp/NO2/Goi2";
+import Goi3 from "./components/TestApp/NO3/Goi3";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,8 @@ export default function RootLayout({ children }) {
         {children}
         <Goi />
         <Goi2 />
+        <br />
+        {/* <Goi3 /> */}
       </body>
     </html>
   );

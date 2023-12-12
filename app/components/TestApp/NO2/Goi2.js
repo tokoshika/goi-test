@@ -7,6 +7,28 @@ export default function Goi() {
   const [index, setIndex] = useState(0);
   const [count, setCout] = useState(0);
   const [len, setLen] = useState(qus.length);
+  const [visible, setVisible] = useState(false);
+
+  //   ここはボタンの設定
+  const toggle = () => {
+    // 複製する時はクラスネームを変更すること
+    const div = document.querySelector(".goi-container2");
+    const targetBtn = document.querySelector(".toggle-btn2");
+    console.log(targetBtn);
+
+    if (visible !== false) {
+      console.log("false");
+      div.classList.add("hide2");
+
+      setVisible(false);
+    } else {
+      console.log(div);
+      div.classList.remove("hide2");
+
+      setVisible(true);
+      scrollBy(0, 700);
+    }
+  };
 
   const click = (e) => {
     const a = qus[index].ans.indexOf(e.target.textContent) + 1;
@@ -39,7 +61,11 @@ export default function Goi() {
 
   return (
     <>
-      <div className="goi-container2">
+      {/* 複製する時はクラスネームを変更 */}
+      <button className="toggle-btn2" onClick={toggle}>
+        2番目の問題
+      </button>
+      <div className="goi-container2 hide2">
         <div className="inner-container">
           <p>問題に正解すると1点、間違うと-1点です。</p>
           <div className="question2">

@@ -1,6 +1,6 @@
 .goi-container {
   margin: 0 auto;
-  background-color: aliceblue;
+  background-color: rgb(185, 205, 224);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
@@ -10,6 +10,17 @@
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.goi-container3 {
+  margin: 0 auto;
+  background-color: rgb(243, 243, 178);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.hide1,
+.hide3,
+.hide2 {
+  display: none;
+}
 
 .inner-container {
   margin-left: 20rem;
@@ -17,6 +28,7 @@
 }
 .question,
 .question2,
+.question3,
 .ans {
   font-size: 3rem;
   margin: 0;
@@ -29,6 +41,28 @@ button {
   font-size: 2rem;
   border-radius: 5px;
   margin-bottom: 1.5rem;
+}
+
+.toggle-btn1 {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  background-color: rgb(185, 205, 224);
+  color: black;
+}
+.toggle-btn2 {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  background-color: rgb(216, 201, 218);
+  color: black;
+}
+.toggle-btn3 {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  background-color: rgb(243, 243, 178);
+  color: black;
 }
 
 .goi-span {
