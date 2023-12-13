@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <Goi />
         <Goi2 />
         <br />
-        {/* <Goi3 /> */}
+        <Goi3 />
       </body>
     </html>
   );
