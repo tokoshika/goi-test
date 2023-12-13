@@ -1,5 +1,5 @@
 "use client";
-import { createElement, useState } from "react";
+import { useState } from "react";
 import { qus } from "./Mojule";
 
 export default function Goi() {
@@ -13,11 +13,8 @@ export default function Goi() {
   const toggle = () => {
     // 複製する時はクラスネームを変更すること
     const div = document.querySelector(".goi-container3");
-    const targetBtn = document.querySelector(".toggle-btn3");
-    console.log(targetBtn);
 
     if (visible !== false) {
-      console.log("false");
       div.classList.add("hide3");
       setVisible(false);
     } else {
@@ -27,15 +24,12 @@ export default function Goi() {
     }
   };
 
+  // 回答をクリックした時の処理
   const click = (e) => {
     const a = qus[index].ans.indexOf(e.target.textContent) + 1;
     console.log;
     const b = qus[index].cor;
 
-    console.log(len);
-    console.log(a === b);
-    console.log(a);
-    console.log(b);
     if (a === b && 0 < len - 1) {
       setIndex(index + 1);
       setQuest(quest + 1);
@@ -62,7 +56,7 @@ export default function Goi() {
     <>
       {/* 複製する時はクラスネームを変更 */}
       <button className="toggle-btn3" onClick={toggle}>
-        3番目の問題
+        問題Lv.3
       </button>
       {/* 複製する時はクラスネームを変更 */}
       <div className="goi-container3 hide3">

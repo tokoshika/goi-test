@@ -1,5 +1,5 @@
 "use client";
-import { createElement, useState } from "react";
+import { useState } from "react";
 import { qus } from "./Module";
 
 export default function Goi() {
@@ -7,39 +7,12 @@ export default function Goi() {
   const [index, setIndex] = useState(0);
   const [count, setCout] = useState(0);
   const [len, setLen] = useState(qus.length);
-  // const [visible, setVisible] = useState(false);
 
-  //   ここはボタンの設定
-  // const toggle = () => {
-  //   // 複製する時はクラスネームを変更すること
-  //   const div = document.querySelector(".goi-container");
-  //   const targetBtn = document.querySelector(".toggle-btn1");
-  //   console.log(targetBtn);
-  //   console.log(document.querySelector(".toggle-btn2"));
-
-  //   if (visible !== false) {
-  //     console.log("false");
-  //     div.classList.add("hide1");
-
-  //     setVisible(false);
-  //   } else {
-  //     console.log(div);
-  //     div.classList.remove("hide1");
-
-  //     setVisible(true);
-  //     scrollBy(0, 700);
-  //   }
-  // };
-
+  // 回答をクリックした時の処理
   const click = (e) => {
     const a = qus[index].ans.indexOf(e.target.textContent) + 1;
-    console.log;
     const b = qus[index].cor;
 
-    console.log(len);
-    console.log(a === b);
-    console.log(a);
-    console.log(b);
     if (a === b && 0 < len - 1) {
       setIndex(index + 1);
       setQuest(quest + 1);
@@ -64,7 +37,7 @@ export default function Goi() {
   return (
     <>
       {/* 複製する時はクラスネームを変更 */}
-      <button className="toggle-btn1">1番目の問題</button>
+      <button className="toggle-btn1">問題Lv.1</button>
       <div className="goi-container ">
         {/* 複製する時はクラスネームをかえる */}
         <div className="inner-container">
