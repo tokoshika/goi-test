@@ -12,14 +12,13 @@ export default function Goi() {
   //   ここはボタンの設定
   const toggle = () => {
     // 複製する時はクラスネームを変更すること
-    const div = document.querySelector(".goi-container3");
-    console.log("toggle");
+    const div = document.querySelector(".goi-container4");
 
     if (visible !== false) {
-      div.classList.add("hide3");
+      div.classList.add("hide4");
       setVisible(false);
     } else {
-      div.classList.remove("hide3");
+      div.classList.remove("hide4");
       setVisible(true);
       scrollBy(0, 700);
     }
@@ -28,7 +27,6 @@ export default function Goi() {
   // 回答をクリックした時の処理
   const click = (e) => {
     const a = qus[index].ans.indexOf(e.target.textContent) + 1;
-    console.log;
     const b = qus[index].cor;
 
     if (a === b && 0 < len - 1) {
@@ -42,9 +40,9 @@ export default function Goi() {
       alert(`finish あたなの得点は${count + 1}です`);
 
       // 複製する時はクラスネームをかえる
-      document.querySelector(".question3").textContent = "お疲れさまでした！";
+      document.querySelector(".question4").textContent = "お疲れさまでした！";
       // 複製する時はクラスネームをかえる
-      const ansDiv = document.querySelector(".ans3");
+      const ansDiv = document.querySelector(".ans4");
 
       ansDiv.innerHTML = "";
     } else {
@@ -56,20 +54,20 @@ export default function Goi() {
   return (
     <>
       {/* 複製する時はクラスネームを変更 */}
-      <button className="toggle-btn3" onClick={toggle}>
-        問題Lv.3
+      <button className="toggle-btn4" onClick={toggle}>
+        問題Lv.4
       </button>
       {/* 複製する時はクラスネームを変更 */}
-      <div className="goi-container3 hide3">
+      <div className="goi-container4 hide4">
         {/* inner-containerは各コンポーネント共通だからかえない */}
         {/* CSSは共通であてている */}
         <div className="inner-container">
           <p>問題に正解すると1点、間違うと-1点です。</p>
           {/* 複製する時はクラスネームを変更 */}
-          <div className="question3">
+          <div className="question4">
             問題 {quest + 1} : {qus[quest].q}
           </div>
-          <div className="ans3">
+          <div className="ans4">
             <button onClick={click}>{qus[index].ans[0]}</button>
             <br />
             <button onClick={click}>{qus[index].ans[1]}</button>

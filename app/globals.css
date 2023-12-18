@@ -16,9 +16,16 @@
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.goi-container4 {
+  margin: 0 auto;
+  background-color: rgb(243, 178, 234);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .hide1,
 .hide3,
-.hide2 {
+.hide2,
+.hide4 {
   display: none;
 }
 
@@ -29,6 +36,7 @@
 .question,
 .question2,
 .question3,
+.question4,
 .ans {
   font-size: 3rem;
   margin: 0;
@@ -71,6 +79,13 @@ button {
   margin-top: 1rem;
   margin-bottom: 0;
   background-color: rgb(243, 243, 178);
+  color: black;
+}
+.toggle-btn4 {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  background-color: rgb(226, 178, 243);
   color: black;
 }
 

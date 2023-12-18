@@ -3,6 +3,7 @@ import "./globals.css";
 import Goi from "./components/TestApp/NO1/Goi";
 import Goi2 from "./components/TestApp/NO2/Goi2";
 import Goi3 from "./components/TestApp/NO3/Goi3";
+import Goi4 from "./components/TestApp/NO4/Goi4";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,8 @@ export default function RootLayout({ children }) {
         <Goi2 />
         <br />
         <Goi3 />
+        <br />
+        <Goi4 />
       </body>
     </html>
   );
